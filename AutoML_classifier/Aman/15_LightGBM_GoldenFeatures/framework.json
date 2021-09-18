@@ -1,0 +1,202 @@
+{
+    "uid": "82c1bc07-e0f5-4d07-8b58-62d8b7740694",
+    "name": "15_LightGBM_GoldenFeatures",
+    "preprocessing": [
+        {
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Year",
+                        "feature2": "Humidity",
+                        "operation": "diff",
+                        "score": 0.6617419658
+                    },
+                    {
+                        "feature1": "Cloud",
+                        "feature2": "Year",
+                        "operation": "sum",
+                        "score": 0.6758619725
+                    },
+                    {
+                        "feature1": "Year",
+                        "feature2": "Wind",
+                        "operation": "diff",
+                        "score": 0.6897222499
+                    },
+                    {
+                        "feature1": "Sunshine",
+                        "feature2": "Year",
+                        "operation": "sum",
+                        "score": 0.6962236101
+                    },
+                    {
+                        "feature1": "Year",
+                        "feature2": "Min_Temp",
+                        "operation": "diff",
+                        "score": 0.7072090282
+                    },
+                    {
+                        "feature1": "Wind",
+                        "feature2": "Year",
+                        "operation": "sum",
+                        "score": 0.7124465069
+                    },
+                    {
+                        "feature1": "Year",
+                        "feature2": "Cloud",
+                        "operation": "diff",
+                        "score": 0.7175478828
+                    },
+                    {
+                        "feature1": "Year",
+                        "feature2": "Max_Temp",
+                        "operation": "diff",
+                        "score": 0.7654330166
+                    },
+                    {
+                        "feature1": "Year",
+                        "feature2": "District",
+                        "operation": "sum",
+                        "score": 0.7839709867
+                    },
+                    {
+                        "feature1": "Min_Temp",
+                        "feature2": "Year",
+                        "operation": "sum",
+                        "score": 0.7840063341
+                    }
+                ],
+                "new_columns": [
+                    "Year_diff_Humidity",
+                    "Cloud_sum_Year",
+                    "Year_diff_Wind",
+                    "Sunshine_sum_Year",
+                    "Year_diff_Min_Temp",
+                    "Wind_sum_Year",
+                    "Year_diff_Cloud",
+                    "Year_diff_Max_Temp",
+                    "Year_sum_District",
+                    "Min_Temp_sum_Year"
+                ],
+                "ml_task": "regression"
+            },
+            "scale_y": {
+                "scale": [
+                    0.1355144142696145
+                ],
+                "mean": [
+                    0.2873202496480026
+                ],
+                "var": [
+                    0.018364156474836694
+                ],
+                "n_samples_seen": 197,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_log_and_normal",
+                "X_min_values": [
+                    0.264406152
+                ]
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_log_and_normal"
+                ],
+                "ml_task": "regression",
+                "golden_features": {
+                    "results_path": "AutoML_classifier/Aman",
+                    "ml_task": "regression"
+                }
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "3.2.1",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "2d3ea917-ec97-4c63-865d-3c8d64548238",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "objective": "regression",
+                "num_leaves": 15,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.8,
+                "bagging_fraction": 0.5,
+                "min_data_in_leaf": 50,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 0
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_log_and_normal"
+            ],
+            "ml_task": "regression",
+            "golden_features": {
+                "results_path": "AutoML_classifier/Aman",
+                "ml_task": "regression"
+            }
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.9,
+            "shuffle": true,
+            "X_path": "AutoML_classifier/Aman/X.data",
+            "y_path": "AutoML_classifier/Aman/y.data",
+            "results_path": "AutoML_classifier/Aman"
+        },
+        "learner": {
+            "model_type": "LightGBM",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "objective": "regression",
+            "num_leaves": 15,
+            "learning_rate": 0.05,
+            "feature_fraction": 0.8,
+            "bagging_fraction": 0.5,
+            "min_data_in_leaf": 50,
+            "metric": "rmse",
+            "custom_eval_metric_name": null,
+            "explain_level": 0
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 0,
+        "name": "15_LightGBM_GoldenFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_golden_features",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "15_LightGBM_GoldenFeatures/learner_fold_0.lightgbm"
+    ],
+    "predictions_fname": "15_LightGBM_GoldenFeatures/predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 0.08034743693594133,
+    "train_time": 1.8945019245147705,
+    "is_stacked": false
+}

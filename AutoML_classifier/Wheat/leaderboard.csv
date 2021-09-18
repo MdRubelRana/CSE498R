@@ -1,0 +1,8 @@
+name,model_type,metric_type,metric_value,train_time
+1_DecisionTree,Decision Tree,rmse,0.16920296694098294,0.58
+2_DecisionTree,Decision Tree,rmse,0.1601120049867608,0.58
+3_DecisionTree,Decision Tree,rmse,0.16011200498676084,0.55
+4_Linear,Linear,rmse,0.16051380764493214,0.54
+14_LightGBM,LightGBM,rmse,0.13763122217918677,0.71
+5_Xgboost,Xgboost,rmse,0.13916565597333352,6.37
+Ensemble,Ensemble,rmse,0.1319417877366825,0.32

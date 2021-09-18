@@ -1,0 +1,214 @@
+{
+    "uid": "ed021d68-3019-42c9-a8d2-a4fbb3ad70e5",
+    "name": "4_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        4.886781028845942,
+                        12.421419531379293,
+                        0.9624565685787109,
+                        1.225628841468553,
+                        13.895619284296675,
+                        4.535651667579452,
+                        0.4873232409443424,
+                        0.35771443212028653,
+                        0.7892155366645741,
+                        13.406566245178842
+                    ],
+                    "mean": [
+                        9.04152249134948,
+                        1990.356401384083,
+                        30.192301038062286,
+                        14.63226643598616,
+                        16.308823529411764,
+                        74.93858131487889,
+                        0.8089965397923875,
+                        1.355968858131488,
+                        7.437753276031141,
+                        16.54325259515571
+                    ],
+                    "var": [
+                        23.880628823888603,
+                        154.29166317453098,
+                        0.9263226464003067,
+                        1.5021660570395472,
+                        193.08823529411765,
+                        20.57213604961626,
+                        0.23748394116449756,
+                        0.12795961494713906,
+                        0.6228611633127518,
+                        179.73601848636872
+                    ],
+                    "n_samples_seen": 289,
+                    "n_features_in": 10,
+                    "columns": [
+                        "District",
+                        "Year",
+                        "Max_Temp",
+                        "Min_Temp",
+                        "Rainfall",
+                        "Humidity",
+                        "Wind",
+                        "Cloud",
+                        "Sunshine",
+                        "ALT"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    0.2206344703752348
+                ],
+                "mean": [
+                    0.6861913051903115
+                ],
+                "var": [
+                    0.048679569517760354
+                ],
+                "n_samples_seen": 289,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_normal"
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "District": [
+                        "scale_normal"
+                    ],
+                    "Year": [
+                        "scale_normal"
+                    ],
+                    "Max_Temp": [
+                        "scale_normal"
+                    ],
+                    "Min_Temp": [
+                        "scale_normal"
+                    ],
+                    "Rainfall": [
+                        "scale_normal"
+                    ],
+                    "Humidity": [
+                        "scale_normal"
+                    ],
+                    "Wind": [
+                        "scale_normal"
+                    ],
+                    "Cloud": [
+                        "scale_normal"
+                    ],
+                    "Sunshine": [
+                        "scale_normal"
+                    ],
+                    "ALT": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "e58d3e6c-ced5-48a9-92a2-39a0fbd1e106",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 0
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "District": [
+                    "scale_normal"
+                ],
+                "Year": [
+                    "scale_normal"
+                ],
+                "Max_Temp": [
+                    "scale_normal"
+                ],
+                "Min_Temp": [
+                    "scale_normal"
+                ],
+                "Rainfall": [
+                    "scale_normal"
+                ],
+                "Humidity": [
+                    "scale_normal"
+                ],
+                "Wind": [
+                    "scale_normal"
+                ],
+                "Cloud": [
+                    "scale_normal"
+                ],
+                "Sunshine": [
+                    "scale_normal"
+                ],
+                "ALT": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.9,
+            "shuffle": true,
+            "X_path": "AutoML_classifier/Wheat/X.data",
+            "y_path": "AutoML_classifier/Wheat/y.data",
+            "results_path": "AutoML_classifier/Wheat"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 0
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 0,
+        "name": "4_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "4_Linear/learner_fold_0.linear"
+    ],
+    "predictions_fname": "4_Linear/predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 0.16051380764493214,
+    "train_time": 0.3229241371154785,
+    "is_stacked": false
+}
